@@ -1,7 +1,3 @@
-
-
-// Customer
-
 struct Product {
   let id: Int 
   var name: String 
@@ -19,8 +15,6 @@ func addProduct(_ id: Int,_ name: String,_ price: Int,_ discount: Int) -> Produc
 
 allProducts.append(addProduct(1,"apple",500,0))
 allProducts.append(addProduct(2,"banana",200,0))
-
-// print(allProducts)
 
 // String Error Handlind
 func stringErrorHandling(_ userInput:String) -> String
@@ -75,10 +69,6 @@ func inputNewProductDetails() {
 }
 
 // edit product details
-//error
-// also add a condition to exit the product search menu
-// learn more about keypath
-// why in for i in "i" is let and it works when using index
 func editProductDetails() {
   
   func updateStringValue(_ newValue: String, _ toEdit: WritableKeyPath<Product, String>, _ index: Int) -> Bool {
@@ -152,8 +142,6 @@ func editProductDetails() {
           }
           
           break
-  
-          // print(allProducts)
         }
         else if choice == 2
         {
@@ -298,7 +286,6 @@ func removeFromCart()
 {
   print("Enter ID of product to Remove:", terminator:" ")
   let productID = Int(readLine() ?? "") ?? 0
-  // bad way for removing a product as it is done while iterating the array
   for product in 0..<cart.count
   {
     if cart[product].id == productID
